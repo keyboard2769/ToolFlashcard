@@ -124,6 +124,8 @@ public final class MainActionManager {
         MainFrame.O_TABLE.ccRefresh();
         ScConst.ccScrollToLast(MainFrame.O_TABLE);
       }//..?
+      McVocabularyModel.ccGetInstance().ccSort();
+      MainFrame.O_TABLE.ccRefresh();
       MainFrame.O_STATUS_BAR
         .setText(McVocabularyModel.ccGetInstance().ccToStatusString());
       MainFrame.O_KEY_ENG.setText("");
