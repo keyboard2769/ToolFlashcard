@@ -29,6 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
+import ppplib.ScConst;
 import ppplib.VcConst;
 import pppmain.MainFrame;
 import processing.core.PApplet;
@@ -122,7 +123,12 @@ public final class McVocabularyModel implements TableModel{
   }//+++
   
   public final void ccSort(){
-    Collections.sort(cmLesCard);
+    try {
+      Collections.sort(cmLesCard);
+    } catch (Exception e) {
+      MainFrame.ccWriteln("[bad]sorting prolem occured while doing ??? .");
+      MainFrame.ccErrorBox("bad sorting prolem!!");
+    }//..?
   }//+++
   
   public final int ccGetSize(){

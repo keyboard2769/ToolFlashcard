@@ -93,6 +93,8 @@ public final class MainActionManager {
         "CAST IN THE NAME OF TEST"
         +VcConst.C_V_NEWLINE+
         "YA NOT GUILTY"
+        +VcConst.C_V_NEWLINE+
+        MainFrame.ccGetLastStamp()
       );
     }//+++
   };//***

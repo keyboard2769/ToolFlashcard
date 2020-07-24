@@ -358,6 +358,10 @@ public class MainFrame {
   //=== entry
   
   public static final JFrame ccGetFrame(){return O_FRAME;}//+++
+  
+  public static final String ccGetLastStamp(){
+    return "b2007241542";
+  }//+++
 
   public static void main(String[] args) {
     System.out.println("MainFrame.main()::enter");

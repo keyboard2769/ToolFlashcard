@@ -104,18 +104,23 @@ public class McCard implements Comparable<McCard>{
 
   @Override public int compareTo(McCard o) {
     if(o==null){return -1;}
-    if(o.ccGetEvaluation() == ccGetEvaluation()){
-      if(o.ccGetEncounterCount() < ccGetEncounterCount()){
+    return o.ccGetEvaluation()-ccGetEvaluation();
+    
+    /* [tofigure]::what the hell was going on here?!
+      if(o.ccGetEvaluation() == ccGetEvaluation()){
+        if(o.ccGetEncounterCount() < ccGetEncounterCount()){
+          return -1;
+        }else{
+          return 0;
+        }
+      }//..?
+      if(o.ccGetEvaluation() < ccGetEvaluation()){
         return -1;
       }else{
-        return 0;
-      }
-    }//..?
-    if(o.ccGetEvaluation() < ccGetEvaluation()){
-      return -1;
-    }else{
-      return 1;
-    }//..?
+        return 1;
+      }//..?
+    */
+    
   }//+++
 
   @Override public String toString() {
